@@ -1,0 +1,78 @@
+.create {
+  position: relative;
+  justify-content: space-between;
+  padding: 92px 0;
+
+  &__left {
+    align-self: center;
+    max-width: 426px;
+    max-height: fit-content;
+  }
+
+  &__titled {
+    margin: 0;
+    margin-bottom: 20px;
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: "Canela";
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    color: var(--white-color);
+  }
+
+  &__title-salad {
+    color: var(--salad-color);
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--white-color);
+  }
+
+  &__btn {
+    border-radius: 8px;
+    padding: 12px 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white-color);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &--salad {
+      background-color: var(--salad-color);
+    }
+
+    &--transparent {
+      border: 1px solid var(--white-color);
+    }
+  }
+
+  &__right {
+    margin-bottom: 100px;
+  }
+
+  &__img {
+    &--1 {
+      transform: translate(100px, 100px);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    width: 100%;
+    height: 128px;
+    max-width: 346px;
+    background: rgb(31, 65, 61);
+    filter: blur(250px);
+  }
+}

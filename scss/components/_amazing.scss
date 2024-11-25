@@ -1,4 +1,5 @@
 .amazing {
+  position: relative;
   padding: 92px 0;
 
   &__top {
@@ -109,5 +110,18 @@
       line-height: 120%;
       color: var(--salad-color);
     }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 305px;
+    max-width: 434px;
+    background: rgb(31, 65, 61);
+    filter: blur(350px);
   }
 }

@@ -1,0 +1,94 @@
+.subscribe {
+  position: relative;
+  justify-content: space-between;
+  padding: 92px 0;
+
+  &__left {
+    margin-bottom: 53px;
+  }
+
+  &__img {
+    &--1 {
+      max-width: 410px;
+      max-height: 376px;
+      transform: rotate(-11deg) translateX(29px);
+    }
+
+    &--2 {
+      max-width: 282px;
+      max-height: 348px;
+      transform: translate(-100px, 80px);
+    }
+  }
+
+  &__right {
+    align-self: center;
+    max-width: 520px;
+    max-height: fit-content;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: "Canela";
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    color: var(--white-color);
+
+    &-salad {
+      color: var(--salad-color);
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--white-color);
+  }
+
+  &__form {
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: rgb(19, 30, 58);
+  }
+
+  &__input {
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    max-width: 326px;
+    color: var(--white-color);
+    background-color: transparent;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: rgba(255, 255, 253, 0.72);
+    }
+
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 1000px rgb(19, 30, 58) inset;
+      font-size: 16px;
+      line-height: 160%;
+      -webkit-text-fill-color: rgba(255, 255, 253, 0.72);
+    }
+  }
+
+  &__btn {
+    border-radius: 8px;
+    padding: 12px 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white-color);
+    background-color: var(--salad-color);
+  }
+}
