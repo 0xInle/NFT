@@ -1,6 +1,7 @@
 .hero {
   justify-content: space-between;
-  padding: 92px 0;
+  padding-top: 92px;
+  padding-bottom: 92px;
   width: 100%;
   
   &__left {
@@ -28,7 +29,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
-    color: var(--white-color);
+    color: var(--gray-color);
   }
 
   &__button-block {

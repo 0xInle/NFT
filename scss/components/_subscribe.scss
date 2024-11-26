@@ -1,7 +1,8 @@
 .subscribe {
   position: relative;
   justify-content: space-between;
-  padding: 92px 0;
+  padding-top: 92px;
+  padding-bottom: 92px;
 
   &__left {
     margin-bottom: 53px;
@@ -48,7 +49,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
-    color: var(--white-color);
+    color: var(--gray-color);
   }
 
   &__form {
@@ -90,5 +91,29 @@
     line-height: 120%;
     color: var(--white-color);
     background-color: var(--salad-color);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 356px;
+    max-width: 513px;
+    background: rgb(31, 65, 61);
+    filter: blur(350px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+    width: 100%;
+    height: 93px;
+    max-width: 345px;
+    background: rgb(26, 38, 82);
+    filter: blur(250px);
   }
 }
