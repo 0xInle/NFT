@@ -30,11 +30,30 @@
     }
   }
 
+  &__link-social {
+    outline: none;
+
+    &:focus .footer__icon-social {
+      fill: var(--salad-color);
+    }
+
+    @include hover {
+      .footer__icon-social {
+        fill: var(--salad-color);
+      }
+    }
+
+    &:active .footer__icon-social {
+      fill: var(--white-color);
+    }
+  }
+
   &__icon-social {
     width: 25px;
     height: 25px;
     fill: var(--white-color);
     stroke: var(--bg-color);
+    transition: all .3s ease-in-out;
   }
 
   &__right {
@@ -59,10 +78,24 @@
   }
 
   &__link-info {
+    outline: none;
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
     color: var(--gray-color);
+    transition: all .3s ease-in-out;
+
+    &:focus {
+      color: var(--salad-color);
+    }
+
+    @include hover {
+      color: var(--salad-color);
+    }
+
+    &:active {
+      color: var(--white-color);
+    }
   }
 
   &__legal {

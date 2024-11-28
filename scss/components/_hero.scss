@@ -38,23 +38,59 @@
   }
 
   &__btn {
+    outline: none;
     border-radius: 8px;
     padding: 12px 40px;
     font-weight: 700;
     font-size: 16px;
     line-height: 120%;
     color: var(--white-color);
+    transition: all .3s ease-in-out;
 
     &:not(:last-child) {
       margin-right: 30px;
     }
 
     &--salad {
+      border: 1px solid var(--salad-color);
       background-color: var(--salad-color);
+
+      &:focus {
+        border: 1px solid var(--white-color);
+        color: var(--salad-color);
+        background-color: transparent;
+      }
+  
+      @include hover {
+        border: 1px solid var(--white-color);
+        color: var(--salad-color);
+        background-color: transparent;
+      }
+  
+      &:active {
+        border: 1px solid transparent;
+        color: var(--white-color);
+        background-color: var(--salad-color);
+      }
     }
 
     &--transparent {
       border: 1px solid var(--white-color);
+
+      &:focus {
+        border: 1px solid var(--salad-color);
+        color: var(--salad-color);
+      }
+  
+      @include hover {
+        border: 1px solid var(--salad-color);
+        color: var(--salad-color);
+      }
+  
+      &:active {
+        border: 1px solid var(--white-color);
+        color: var(--white-color);
+      }
     }
   }
 
@@ -146,6 +182,7 @@
     }
 
     &-btn {
+      outline: none;
       border: 1px solid var(--salad-color);
       border-radius: 8px;
       padding: 12px 40px;
@@ -154,6 +191,25 @@
       font-size: 16px;
       line-height: 120%;
       color: var(--salad-color);
+      transition: all .3s ease-in-out;
+
+      &:focus {
+        border: 1px solid var(--salad-color);
+        color: var(--white-color);
+        background-color: var(--salad-color);
+      }
+  
+      @include hover {
+        border: 1px solid var(--salad-color);
+        color: var(--white-color);
+        background-color: var(--salad-color);
+      }
+  
+      &:active {
+        border: 1px solid var(--salad-color);
+        color: var(--salad-color);
+        background-color: transparent;
+      }
     }
   }
 }

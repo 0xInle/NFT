@@ -26,6 +26,8 @@
 
   &__btn {
     align-self: flex-end;
+    outline: none;
+    border: 1px solid transparent;
     border-radius: 8px;
     padding: 12px 40px;
     font-weight: 700;
@@ -33,6 +35,25 @@
     line-height: 120%;
     color: var(--white-color);
     background-color: var(--salad-color);
+    transition: all .3s ease-in-out;
+
+    &:focus {
+      border: 1px solid var(--white-color);
+      color: var(--salad-color);
+      background-color: transparent;
+    }
+
+    @include hover {
+      border: 1px solid var(--white-color);
+      color: var(--salad-color);
+      background-color: transparent;
+    }
+
+    &:active {
+      border: 1px solid transparent;
+      color: var(--white-color);
+      background-color: var(--salad-color);
+    }
   }
 
   &__list {
@@ -103,6 +124,7 @@
     }
 
     &-btn {
+      outline: none;
       border: 1px solid var(--salad-color);
       border-radius: 8px;
       padding: 12px 40px;
@@ -110,6 +132,25 @@
       font-size: 16px;
       line-height: 120%;
       color: var(--salad-color);
+      transition: all .3s ease-in-out;
+
+      &:focus {
+        border: 1px solid var(--salad-color);
+        color: var(--white-color);
+        background-color: var(--salad-color);
+      }
+  
+      @include hover {
+        border: 1px solid var(--salad-color);
+        color: var(--white-color);
+        background-color: var(--salad-color);
+      }
+  
+      &:active {
+        border: 1px solid var(--salad-color);
+        color: var(--salad-color);
+        background-color: transparent;
+      }
     }
   }
 

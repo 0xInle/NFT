@@ -25,17 +25,57 @@
   }
 
   &__link {
+    position: relative;
+    outline: none;
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
     color: rgba(255, 255, 253, 0.72);
+    transition: all .3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--salad-color);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
 
     @media (width <=479px) {
       font-size: 14px;
     }
+
+    &:focus {
+      color: var(--white-color);
+
+      &::after {
+        transform: scaleX(1);    
+      }
+    }
+
+    @include hover {
+      color: var(--white-color);
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);    
+        }
+      }
+    }
+
+    &:active {
+      color: var(--salad-color);
+    }
   }
 
   &__btn {
+    outline: none;
+    border: 1px solid transparent;
     border-radius: 12px;
     padding: 12px 40px;
     font-weight: 700;
@@ -43,9 +83,28 @@
     line-height: 120%;
     color: var(--white-color);
     background-color: var(--salad-color);
+    transition: all .3s ease-in-out;
 
     @media (width <=767px) {
       display: none;
+    }
+  
+    &:focus {
+      border: 1px solid var(--white-color);
+      color: var(--salad-color);
+      background-color: transparent;
+    }
+
+    @include hover {
+      border: 1px solid var(--white-color);
+      color: var(--salad-color);
+      background-color: transparent;
+    }
+
+    &:active {
+      border: 1px solid transparent;
+      color: var(--white-color);
+      background-color: var(--salad-color);
     }
   }
 }
