@@ -4,8 +4,25 @@
   padding-top: 92px;
   padding-bottom: 92px;
 
+  @media (width <=1023px) {
+    justify-content: end;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (width <=480px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   &__left {
+    margin-right: 50px;
     margin-bottom: 53px;
+    max-width: 630px;
+
+    @media (width <=1023px) {
+      display: none;
+    }
   }
 
   &__img {
@@ -26,6 +43,14 @@
     align-self: center;
     max-width: 520px;
     max-height: fit-content;
+
+    @media (width <=1023px) {
+      max-width: 75%;
+    }
+
+    @media (width <=535px) {
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -57,6 +82,10 @@
     border-radius: 8px;
     padding: 4px;
     background-color: rgb(19, 30, 58);
+
+    @media (width <=1023px) {
+      max-width: 100%;
+    }
   }
 
   &__input {
@@ -67,6 +96,10 @@
     max-width: 326px;
     color: var(--white-color);
     background-color: transparent;
+
+    @media (width <=1023px) {
+      max-width: 100%;
+    }
 
     &::placeholder {
       font-weight: 400;
@@ -94,6 +127,10 @@
     color: var(--white-color);
     background-color: var(--salad-color);
     transition: all .3s ease-in-out;
+
+    @media (width <=480px) {
+      padding: 12px 28px;
+    }
 
     &:focus {
       border: 1px solid var(--white-color);
